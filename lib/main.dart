@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter 3.0.4 ',
       theme: ThemeData(
+        useMaterial3: true,
         scaffoldBackgroundColor: lightScaffoldColor,
         primaryColor: lightCardColor,
         backgroundColor: lightBackgroundColor,
@@ -33,14 +34,11 @@ class MyApp extends StatelessWidget {
         iconTheme: IconThemeData(
           color: lightIconsColor,
         ),
-
         textSelectionTheme: const TextSelectionThemeData(
           cursorColor: Colors.black,
           selectionColor: Colors.blue,
-
           // selectionHandleColor: Colors.blue,
         ),
-
         // textTheme: TextTheme()
         // textTheme: Theme.of(context).textTheme.apply(
         //       bodyColor: Colors.black,
