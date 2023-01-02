@@ -4,12 +4,12 @@ import 'package:http/http.dart' as http;
 
 import '../consts/api_conts.dart';
 
-
 class APIHandler {
   static Future<void> getAllProducts() async {
     var uri = Uri.https(
       BASE_URL,
-      "api/v1/products",
+      //"api/v1/products",
+      "products",
     );
     var response = await http.get(uri);
 
