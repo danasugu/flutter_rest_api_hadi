@@ -1,1 +1,1 @@
-const BASE_URL = 'https://api.themoviedb.org/3';
+const String BASE_URL = "api.escuelajs.co";

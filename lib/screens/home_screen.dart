@@ -10,6 +10,7 @@ import '../widgets/sale_widget.dart';
 import 'categories_screen.dart';
 import 'feeds_screen.dart';
 import 'users_screen.dart';
+import '/services/api_handler.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -20,6 +21,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   late TextEditingController _textEditingController;
+
   @override
   void initState() {
     _textEditingController = TextEditingController();
@@ -30,6 +32,12 @@ class _HomeScreenState extends State<HomeScreen> {
   void dispose() {
     _textEditingController.dispose();
     super.dispose();
+  }
+
+  @override
+  void didChangeDependencies() {
+    APIHandler.getAllProducts();
+    super.didChangeDependencies();
   }
 
   @override
